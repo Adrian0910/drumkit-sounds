@@ -1,9 +1,3 @@
-/** 
-    ¿COMO VAMOS A HACER ESO ESTUPIDA?
-    - ponerle el sonido a cada div
-    - musica() => evento onKey()
-
-*/
 
 /**constante para obtener clase*/
 const keys = document.querySelectorAll('.key')
@@ -21,20 +15,20 @@ const playMusic = function (e) {
     //sino error!!!!
   } else {
     audioError.play();
-    eresEstupido();
+    errorKey();
   }
 }
 
 /** Funcion para mandar aviso de error de tecla*/
-const eresEstupido = function(){
-  const keys2 = document.querySelector('.keys') 
-    const estupido = document.createElement('p');
-    estupido.classList.add('errorKey');
-    estupido.innerHTML = '<p> NO key!!!</p>'
-    keys2.appendChild(estupido);
+const errorKey = function(){
+  const keys2 = document.querySelector('.divError') 
+    const noKey = document.createElement('p');
+    noKey.classList.add('errorKey');
+    noKey.innerHTML = '<p> NO key!!!</p>'
+    keys2.appendChild(noKey);
 
     setTimeout(() => {
-        estupido.remove();
+        noKey.remove();
       }, 500);
 }
 

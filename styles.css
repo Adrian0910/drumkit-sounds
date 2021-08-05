@@ -50,7 +50,12 @@ kbd{
     color:#ffc600 ;
 }
 
+.divError{
+    display: flexbox;
+}
+
 .errorKey{
+    flex-direction: row;
     margin: 0px auto;
     padding: 0px auto;
     color: red;
